@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Colrolib Templates">
+    <meta name="author" content="Colrolib">
+    <meta name="keywords" content="Colrolib Templates">
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+
+<body>
+ <div class="page-wrapper bg-img-1 p-t-165 p-b-100">
+   <div class="wrapper wrapper--w680">
+     <div class="card card-1">
+      <div class="card-body">
+         <ul style="background:blue;" class="tab-list">
+           <li style="left:25%;"  class="tab-list__item active">
+              Add its own question and answer
+            </li>
+         </ul>
+      <div id="app-qustion">
+        <div class="tab-content">
+          <div class="tab-pane active" id="tab3">
+              <div class="input-group">
+                <label class="label">the question:</label>
+
+              <input class="input--style-1" type="text"multiple v-model="input.question" placeholder="Add your question" required="required">
+
+            </div>
+            <div class="input-group">
+               <label class="label">The Answer:</label>
+               <textarea v-model="input.val_answer" class="input--style-1"></textarea>
+            </div>
+             <div class="p-t-5">
+ 
+             </div>
+               <input type="submit" 
+                 v-on:click="val_question" class="btn-submit" type="submit" value="OK_insert">
+                  <button class="btn-submit" type="submit">
+              <a href="add_qustion.html">add question</a></button>
+                <button v-on:click="clear_all" class="btn-submit" type="submit">
+                 Clear all data in local storage</button>
+               <h3 style="text-align:center;color:#00cc00">
+                {{massg_delete_Storage_all}}
+               </h3>
+            </div>
+          </div>
+         </div>
+       </div>
+      </div>
+     </div>
+   </div>
+
+    <script src="js/global.js"></script>
+    <script src="app.js"></script>
+
+</body>
+</html>
